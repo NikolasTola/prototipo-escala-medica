@@ -1,0 +1,45 @@
+.page-title {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.usuarios-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.usuario-card {
+  border: 1px solid #000;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.usuario-card p {
+  margin: 4px 0;
+}
+
+#senha-display {
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.delete-user-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.usuario-card {
+  position: relative;
+}

@@ -1,0 +1,34 @@
+.page-title {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.vagas-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+.vaga-card {
+  border: 1px solid #000;
+  padding: 16px;
+  position: relative;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 16px;
+  background: #000;
+  color: #fff;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fff;
+}

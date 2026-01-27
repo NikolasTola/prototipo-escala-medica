@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>SUV - Sistema Unificado de Vagas</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/vagas.css">
+</head>
+<body>
+
+<header class="header">
+    <button class="header-left" onclick="window.location.href='index.html'">
+        SUV
+    </button>
+
+    <div style="display: flex; gap: 8px;">
+        <button id="usuarios-btn" class="header-right" onclick="window.location.href='usuarios.html'" style="display: none;">
+            Usuários
+        </button>
+        <button id="graficos-btn" class="header-right" onclick="window.location.href='graficos.html'" style="display: none;">
+            Gráficos
+        </button>
+    </div>
+</header>
+
+  <main>
+    <h1 class="page-title">VAGAS</h1>
+    <div class="top-actions">
+        <button id="add-vaga-btn">Adicionar Vaga</button>
+    </div>
+
+    <section id="vagas-container" class="vagas-container"></section>
+  </main>
+
+  <!-- Modal de confirmação -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Tem certeza que deseja excluir esta vaga?</p>
+      <div class="modal-actions">
+        <button id="confirm-delete">Sim</button>
+        <button id="cancel-delete">Não</button>
+      </div>
+    </div>
+  </div>
+
+    <div id="add-modal" class="modal hidden">
+        <div class="modal-content">
+
+            <button class="close-btn" id="close-add-modal">X</button>
+
+            <h2>Nova vaga</h2>
+
+            <label>Especialidade</label>
+            <input type="text" id="nova-especialidade">
+
+            <label>Unidade</label>
+            <input type="text" id="nova-unidade">
+
+            <label>Criticidade</label>
+            <input type="text" id="nova-criticidade">
+
+            <label>Data</label>
+            <input type="date" id="nova-data">
+
+        <div class="modal-actions">
+        <button id="submit-vaga">Enviar</button>
+        <button id="cancel-vaga">Cancelar</button>
+    </div>
+
+    </div>
+    </div>
+
+
+  <script src="js/vagas.js"></script>
+  <script src="js/vagasRender.js"></script>
+  <script>
+    const loginBtn = document.getElementById("login-btn");
+    const usuariosBtn = document.getElementById("usuarios-btn");
+    const graficosBtn = document.getElementById("graficos-btn");
+
+    if (loginBtn) loginBtn.style.display = "none";
+
+    if (sessionStorage.getItem("role") === "admin" && usuariosBtn) {
+        usuariosBtn.style.display = "block";
+    }
+    
+    if (sessionStorage.getItem("role") === "admin" && graficosBtn) {
+        graficosBtn.style.display = "block";
+    }
+  </script>
+</body>
+</html>
