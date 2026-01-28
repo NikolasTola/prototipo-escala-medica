@@ -18,22 +18,22 @@ const submitVaga = document.getElementById("submit-vaga");
 
 let cardIdToDelete = null;
 
-const defaultUsers  = [
+const defaultVagas = [
   {
-    login: "ADMIN",
-    password: "Senhaforte@123",
-    role: "admin",
-    nome: "Administrador",
-    unidade: "Matriz",
-    primeiroAcesso: false
+    card_id: 1,
+    especialidade: "Desenvolvedor Front-end",
+    unidade: "Unidade Centro",
+    criticidade: "Alta",
+    data: "25/01/2026",
+    preenchida: false
   },
   {
-    login: "CLIENTE",
-    password: "Senhaforte@123",
-    role: "cliente",
-    nome: "Cliente Teste",
-    unidade: "Unidade Centro",
-    primeiroAcesso: false
+    card_id: 2,
+    especialidade: "Analista de Dados",
+    unidade: "Unidade Sul",
+    criticidade: "Média",
+    data: "26/01/2026",
+    preenchida: false
   }
 ];
 
